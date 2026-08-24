@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /*.xlsx$
+Disallow: /*/wp-includes/wlwmanifest.xml

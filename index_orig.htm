@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de-DE">
+<head>
+<meta name="author" content="Armin Joachimsmeyer, Horst Meyer">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Alle Repair Cafes in Köln</title>
+<link rel="stylesheet" id="my_minimal_style" href="files/my_minimal_style.css" media="all">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <style>
+  	@media screen and (orientation: landscape) {
+        #map { min-height: 80vh; }
+    }
+    @media screen and (orientation: portrait) {
+        #map { min-height: 40vh; }
+    }
+    /* Popup-Layout */
+    .poi-popup { width: 220px; }
+    .poi-popup img { width: 100%; height: 130px; object-fit: cover; border-radius: 8px; display: block; margin-bottom: 8px; }
+    .poi-popup h3 { font-size: 16px; margin: 0 0 6px 0; }
+    .poi-popup p { margin: 0; line-height: 1.3; font-size: 13px; }
+  </style>
+</head>
+
+<body>
+<div class="page-frame">
+<div class="page-content">
+
+<h1 id="koeln">Übersicht der Repair Cafés in Köln</h1>
+
+<picture style="float:right">
+  <img src="files/qrcode_www-repaircafe-koeln-de_alle.png" style="max-width: 40vw;">
+</picture>
+
+<p>Viel zu oft werden Dinge viel zu schnell entsorgt.<br>
+Ob der Toaster streikt, das Radio rauscht, der Staubsauger nicht mehr will oder die Stehlampe dunkel bleibt -
+oft muss nur eine Kleinigkeit gerichtet werden.</p>
+
+<p>Repair Cafés bieten <strong>Hilfe zur Selbsthilfe</strong> - und das in Köln an vielen Orten und zu vielen Zeiten.<br>
+<strong>Selbsthilfe</strong> ist dabei alles zwischen "<i>Wir stellen (Spezial)Werkzeug zur Verfügung, und helfen mit Tipps</i>"
+und "<i>Sie beschreiben den Fehler und gucken uns dann interessiert dabei zu, wie wir das Gerät reparieren</i>".<br>
+So wird in netter Atmosphäre die Lebensdauer von Alltagsgegenständen verlängert, Müll vermieden und alle lernen dazu.</p>
+
+<p>Die Reparatur(hilfe) ist <strong>gratis / auf Spendenbasis</strong>, nur Ersatzteile müssen bezahlt werden.<br>
+Die <strong>Reparaturhelfer*innen arbeiten ehrenamtlich</strong> und freuen sich über einen Beitrag.</p>
+
+<p>Repariert wird im Prinzip <strong>alles, was man tragen kann</strong>, weitere <a class="nodecoration" href="#was" title="Was repariert wird">Infos unten</a>.<br>
+
+<p>Die angegebenen Termine sind die <strong>Standardtermine</strong> der jeweiligen Repair Cafés.<br>
+<strong>Ausnahmen</strong>, besonders in den <strong>Sommerferien, zu Karneval, an Feiertagen und zu Weihnachten</strong>, sind immer möglich,
+von daher bitte auf den entsprechenden Seiten nach den aktuellen Terminen schauen.</p>
+
+
+<h2 id="termine_monatlich">Monatliche Termine in Köln</h2>
+<table class="table_line_separator"><thead>
+<tr>
+<th>Termin</th>
+<th>Ort</th>
+<th>Besonderes</th>
+</tr>
+</thead><tbody>
+
+<tr id="Termin_Dellbrück">
+<td><strong>1.&nbsp;Montag</strong> im Monat <br> 16:00 bis 19:00</td>
+<td><a href="https://reparaturcafekoelndellbrueck.webador.de/" target="_blank" rel="noopener" title="Homepage Reparatur Cafe Köln Dellbrück"><strong>Dellbrück</strong> im Bürgertreff 1006</a><br>
+<a class="nodecoration" href="mailto:reparaturcafekoelndellbrueck+webador@gmail.com?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td></td>
+</tr>
+
+<tr id="Termin_Riehl">
+<td><strong>1.&nbsp;Montag</strong> im Monat <br> 10:00 bis 12:00</td>
+<td><a href="https://sbk-koeln.de/angebote/wohnen-pflege/freizeit/riehler-treff/" target="_blank" rel="noopener" title="Reparatur-Cafe Riehl im Riehler Treff der SBK"><strong>Riehl</strong> im Riehler Treff der SBK</a><br>
+<a class="nodecoration" href="mailto:riehlertreff@sbk-koeln.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Näharbeiten und Rollatoren<br>Termin ist im Monatsprogramm</td>
+</tr>
+
+<tr id="Termin_Raderthal">
+<td><strong>1.&nbsp;Mittwoch</strong> im Monat <br> 18:00 bis 20:00</td>
+<td><a href="https://www.kirche-raderthal.de/angebote/repairinitiative/" target="_blank" rel="noopener" title="Homepage Repair Cafe der evangelischen Philippus-Gemeinde"><strong>Raderthal</strong> im Gemeindesaal Philippuskirche</a><br>
+<a class="nodecoration" href="mailto:reinhard.ulbrich@ekir.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Holzbearbeitung</td>
+</tr>
+
+<tr id="Termin_Chorweiler">
+<td><strong>1.&nbsp;Donnerstag</strong> im Monat <br> 15:00 bis 17:00</td>
+<td><a href="https://chorweiler.sozialraumkoordination.koeln/2846/3764.html" target="_blank" rel="noopener" title="Homepage Repair Cafe im BÜZE Chorweiler"><strong>Chorweiler</strong> im Bürgerzentrum</a><br>
+<a class="nodecoration" href="mailto:birgitta.august@stadt-koeln.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td></td>
+</tr>
+
+<tr id="Termin_Engelshof">
+<td><strong>1.&nbsp;Donnerstag</strong> im Monat <br> 15:00 bis 18:00</td>
+<td><a href="https://www.repaircafe-koeln.de/engelshof" target="_blank" rel="noopener" title="Repair Cafe Westhoven"><strong>Westhoven</strong> im Bürgerzentrum Engelshof</a><br>
+<a class="nodecoration" href="mailto:veedelswerkstatt@gmx.net?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Näharbeiten, Catering<br>Voranmeldungen haben Vorrang</td>
+</tr>
+
+<tr id="Termin_Poll">
+<td><strong>1.&nbsp;Samstag</strong> im Monat <br> 13:00 bis 17:00</td>
+<td><a href="https://www.repaircafe-koeln.de/poll" target="_blank" rel="noopener" title="Repair Cafe Poll"><strong>Poll</strong> im Quartier am Hafen</a><br>
+<a class="nodecoration" href="mailto:repaircafepoll@gmx.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Näharbeiten, gutes Catering<br>Voranmeldungen haben Vorrang</td>
+</tr>
+
+<tr id="Termin_Widdersdorf">
+<td><strong>2.&nbsp;Mittwoch</strong> im Monat <br> 15:30 bis 18:30</td>
+<td><a href="https://www.repaircafe-koeln.de/widdersdorf/" target="_blank" rel="noopener" title="Repair Cafe im Pfarrheim Widdersdorf"><strong>Widdersdorf</strong> im Pfarrheim</a><br>
+<a class="nodecoration" href="mailto:widdersdorf@repaircafe-koeln.de?subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Näharbeiten, gutes Catering</td>
+</tr>
+
+<tr id="Termin_Mauenheim">
+<td><strong>2.&nbsp;Donnerstag</strong> im Monat <br> 15:00 bis 17:00</td>
+<td><a href="https://www.repaircafe-koeln.de/mauenheim/" target="_blank" rel="noopener" title="Reparatur-Cafe Mauenheim, Clubraum St. Quirinus"><strong>Mauenheim</strong> im Clubraum St. Quirinus</a><br>
+<a class="nodecoration" href="mailto:reparaturcafe-mauenheim@gmx.de?bcc=info%40repaircafe-koeln.de&subject=Anfrage zur Reparatur eines/einer ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="E-Mail Adresse des Repair Cafes Poll">&#9993; Mail an ...</a></td>
+<td></td>
+</tr>
+
+<tr id="Termin_Stollwerk">
+<td><strong>2.&nbsp;Sonntag</strong> im Monat <br> 14:00 bis 19:00</td>
+<td><a href="https://repair-cafe-koeln-suedstadt.de/" target="_blank" rel="noopener" title="Homepage Repair Cafe im Stollwerk"><strong>Südstadt</strong> im Bürgerhaus Stollwerk</a><br>
+<a class="nodecoration" href="mailto:info@repair-cafe-koeln-suedstadt.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Anmeldung erforderlich, keine Fahrräder</td>
+</tr>
+
+
+<tr id="Termin_Schmuk">
+<td><strong>2. und 4. Sonntag</strong> im Monat <br> 11:30 bis 15:00</td>
+<td><a href="https://www.schmitzundkunzt.de/repair.php?q=1" target="_blank" rel="noopener" title="Homepage Repair Cafe von Schmitzundkunzt"><strong>Sülz</strong> bei Schmitz und Kunzt</a><br>
+<a class="nodecoration" href="mailto:rc@schmitzundkunzt.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Näharbeiten</td>
+</tr>
+
+<tr id="Termin_Lindweiler">
+<td><strong>3.&nbsp;Mittwoch</strong> im Monat <br> 17:00 bis 19:00</td>
+<td><a href="https://www.bv-lindweiler.de/locations/libuetzje/" target="_blank" rel="noopener" title="Homepage des Bürgervereins Lindweiler"><strong>Lindweiler</strong> im Libützje</a><br>
+<a class="nodecoration" href="mailto:info@bv-lindweiler.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Catering</td>
+</tr>
+
+<tr id="Termin_Bueze">
+<td><strong>3.&nbsp;Samstag</strong> im Monat <br> 11:00 bis 15:00</td>
+<td><a href="https://www.repaircafe-koeln.de/bueze" target="_blank" rel="noopener" title="Homepage Repair Cafe im BüzE Ehrenfeld Venloer Straße 429, 50825 Köln" style="font-size:1.2em;"><strong>Ehrenfeld</strong> im Bürgerzentrum</a><br>
+<a class="nodecoration" href="mailto:bueze@repaircafe-koeln.de?subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Elektronik, keine Fahrräder</td>
+</tr>
+
+<tr id="Termin_Worringen">
+<td><strong>4.&nbsp;Samstag</strong> im Monat <br> 14:00 bis 16:00</td>
+<td><a href="https://www.reparatur-initiativen.de/repair-cafe-worringen" target="_blank" rel="noopener" title="Repair Cafe des Bürgervereins Worringen"><strong>Worringen</strong> im AWO-Haus</a><br>
+<a class="nodecoration" href="mailto:hbn333@aol.com?subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Uhrendiagnose, Messerschleifen, Hilfe bei Näharbeiten.</td>
+</tr>
+
+<tr id="Termin_Zbib">
+<td><strong>4.&nbsp;Samstag</strong> im Monat <br> 11:00 bis 15:00</td>
+<td><a href="https://www.stadt-koeln.de/leben-in-koeln/stadtbibliothek/repair-cafes" target="_blank" rel="noopener" title="Repair Cafe in der Stadtbibliothek Hohe Straße 68-82, 50667 Köln"><strong>Innenstadt / Hohe Straße</strong> in der Stadtbibliothek</a><br>
+<a class="nodecoration" href="mailto:zbib@repaircafe-koeln.de?subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Keine Fahrräder</td>
+</tr>
+
+<tr id="Termin_Stephanus">
+<td><strong>letzten Mittwoch</strong> im Monat <br> 15:00 bis 18:00</td>
+<td><a href="https://www.evangelisch-ehrenfeld.de/veranstaltungen/" target="_blank" rel="noopener" title="Termine und Veranstaltungen der Evangelischen Kirchengemeinde Ehrenfeld. Gemeindezentrum Stephanus unten rechts auswählen."><strong>Ehrenfeld</strong> im Gemeindezentrum Stephanus</a><br>
+<a class="nodecoration" href="mailto:heinz-gerd.koch@ekir.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td></td>
+</tr>
+
+<tr id="Termin_Wunschnachbarn">
+<td><strong>letzten Freitag</strong> im Monat <br> 15:00 bis 17:00</td>
+<td><a href="https://wunschnachbarn.de/werkstatt/" target="_blank" rel="noopener" title="Homepage Repair Cafe der Bau- und Hausgemeinschaft Wunschnachbarn im Clouth Quartier"><strong>Nippes</strong>, Wunschnachbarn im Clouth Quartier</a><br>
+<a class="nodecoration" href="mailto:info@wunschnachbarn.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Elektronik, gutes Catering</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h3 style="margin-bottom: 0;" id="termine_rest">Repair Cafés ohne aktuelle Infos</h3>
+<table style="margin-top: 0;"" class="table_line_separator table_extra_padding"><thead>
+<tr>
+<th>Termin</th>
+<th>Ort</th>
+<th>Besonderes</th>
+</tr>
+</thead><tbody>
+
+<tr id="Termin_Suelz">
+<td><strong>1.&nbsp;Samstag</strong> im Monat <br> 11:00 bis 13:00</td>
+<td><a href="https://kirche-klettenberg.de/seniorennetzwerk/aktuelles-programm/" target="_blank" rel="noopener" title="Repair-Cafe Sülz im Café Lamerdin"><strong>Sülz</strong> im Café Lamerdin</a></td>
+<td>Auch  Näharbeiten, Termin ist auf der letzten Seite des Programms</td>
+</tr>
+
+<!--
+<tr id="Termin_Humboldt">
+<td><strong>2.&nbsp;Montag</strong> im Monat <br> 15:30 bis 18:00</td>
+<td><a href="https://seniorennetzwerke-koeln.de/die-netzwerke/humboldt-gremberg/" target="_blank" rel="noopener" title="Reparatur Cafe des SBK in Humboldt-Gremberg">Humboldt-Gremberg</a></td>
+<td></td>
+<td>Auf Mails wird leider nicht geantwortet, Termine sind unklar</td>
+</tr>
+-->
+
+
+</tbody>
+</table>
+
+
+<h2 id="termine_sonst">Weitere Reparaturtermine in Köln</h2>
+<table class="table_line_separator table_extra_padding"><thead>
+<tr>
+<th>Termin</th>
+<th>Ort</th>
+<th>Besonderes</th>
+</tr>
+</thead><tbody>
+
+<tr id="Termin_Bastelabend">
+<td><strong>Jeden Freitag</strong><br>19:00 bis 22:00</td>
+<td><a href="https://dingfabrik.de/veranstaltungen/bastelnachmittag/" target="_blank" rel="noopener" title="Bastelabend in der Dingfabrik in Ehrenfeld">Ehrenfeld - Bastelabend im Maker Space Dingfabrik</a><br>
+<a class="nodecoration" href="mailto:post@dingfabrik.de?bcc=info%40repaircafe-koeln.de&subject=Frage zum Bastelnachmittag" title="Email an die Dingfabrik">&#9993; Mail an ...</a></td>
+<td><strong>Kein Repair Café, aber<br>Gäste sind willkommen</strong></td>
+</tr>
+
+<tr id="Termin_Stadt">
+<td>Wechselnde Termine</td>
+<td><a href="https://www.stadt-koeln.de/leben-in-koeln/stadtbibliothek/repair-cafes" target="_blank" rel="noopener" title="Repair Cafe in den Stadtteilbibliotheken">Repair Cafés in den Stadtteilbibliotheken</a><br>
+<a class="nodecoration" href="mailto:zbib@repaircafe-koeln.de?subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td></td>
+</tr>
+
+<tr id="Termin_Repairmobil">
+<td>Unregelmäßig</td>
+<td><a href="https://www.repaircafe-koeln.de/repairmobil/" target="_blank" rel="noopener" title="Repairmobil">Das mobile Repair Café "Köln Repariert"</a><br>
+<a class="nodecoration" href="mailto:repairmobil@repaircafe-koeln.de" title="Email an das Repairmobil">&#9993; Mail an ...</a></td>
+<td>Verschiedene Standorte</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h2 id="was">Was wird repariert?</h2>
+<p><strong>Im Prinzip alles, was man tragen kann.</strong><br>
+	Ein Blick auf die <a href="blog/index.htm" title="Bilder und Infos">Bilder von durchgeführten Reparaturen</a>
+	und das Kategorien-Diagramm unten geben eine genauere Vorstellung davon, was repariert wird.
+</p>
+<p>Bitte bei entsprechenden Geräten auch das Netzteil, die Fernbedienung, eine CD oder Kassette etc. mitbringen,
+	damit der Fehler nachgestellt und die Reparatur getestet werden kann. Eine Lausprecherbox ist in manchen Repair Cafés vorhanden, aber besser vorher nachfragen.</p>
+<p>Bei CD Spielern, deren Lade nicht mehr herauskommt, ist meistens der Antriebsriemen schlapp, der ersetzt werden kann.<br>
+	CD Spieler, die <strong>„No Disc“</strong> anzeigen, sind eher selten erfolgreich zu reparieren, genauso wie <strong>Drucker</strong>.</p>
+<p>Da die Reparatur von <strong>Kaffeevollautomaten</strong> mehrere Stunden in Anspruch nehmen kann, wird dieser Service in den Repair Cafés in Köln zum Teil nur eingeschränkt angeboten. Am besten vorher nachfragen.<br>
+Unter dieser <a href="https://www.google.com/search?q=kaffeemaschinen+reparatur+koeln" target="_blank" rel="noopener" title="Suche zu Reparatur von Kaffeemaschinen in Köln">Google Suche</a>
+findet man professionelle Reparaturmöglichkeiten für Kaffeemaschinen in Köln.</p>
+<p>Bei Druckern, Laptops und Handys besser vorher nachfragen, ob diese dort repariert werden!</p>
+
+
+<h2 id="anmeldung">Anmeldung per E-Mail</h2>
+<p">Eine Anmeldung ist meistens nicht erforderlich, aber eine E-Mail mit Gerätebezeichnung, Alter des Geräts, Fotos und einer Fehlerbeschreibung hilft den Reparateuren, sich auf die Reparatur vorzubereiten.<br>
+	<strong>Eine E-Mail bedeutet aber nicht unbedingt, dass man in der Reihenfolge Vorrang hat.</strong>
+</p>
+
+<br>
+
+<h1 id="termine_fahrrad">Fahrrad Selbsthilfe-Werkstätten</h1>
+<table class="table_line_separator table_extra_padding"><thead>
+<tr>
+<th>Termin</th>
+<th >Ort</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Samstag</strong> <br> 12:00 bis 17:00</td>
+<td><a href="https://klugev.de/projekte/liebig257/" target="_blank" rel="noopener" title="Kalender des Klug e.V. in der Liebigstr. 257"><strong>Nippes</strong> Liebigstr. 257 am Bahnhof Köln Nippes</a></td>
+</tr>
+<tr>
+<td><strong>Dienstag und Freitag</strong> <br> 15:00 bis 17:00 (bei Sommerzeit bis 18:00)</td>
+<td><a href="https://aktion-nachbarschaft.de/bickendorf/bickendorfer-fahrradbudchen" target="_blank" rel="noopener" title="Homepage Bickendorfer Fahrradbuedchen"><strong>Bickendorf</strong>er Fahrradbüdchen in der Nähe des Westfriedhofs</a></td>
+</tr>
+<tr>
+<td><strong>Mittwoch</strong> <br> 18:00 bis 22:00</td>
+<td><a href="https://az-koeln.org/bikekitchen/" target="_blank" rel="noopener" title="Homepage Bike Kitchen Cologne">Bike Kitchen Cologne im AZ an der <strong>Luxemburger Str.</strong> in der Nähe des Unicenters</a></td>
+</tr>
+<tr>
+<td><strong>Dienstag</strong> 17:00 bis 19:00 für bedürftige <strong>Erwachsene</strong><br>+ <strong>Freitag</strong> 15:00 bis 19:00<br>+ <strong>Samstag</strong> 14:00 bis 19:00 für <strong>Kinder und Jugendliche</strong></td>
+<td><a href="https://www.lutherkirche-nippes.de/einrichtungen/ot-werkstattstrasse/" target="_blank" rel="noopener" title="Homepage OT Werkstattstraße"><strong>Nippes</strong> OT Werkstattstraße 7 / Dormagener Straße 5</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2 style="margin-bottom: 0;" id="termine_textil">Textiles Repair Café</h2>
+<table class="table_line_separator table_extra_padding"><thead>
+<tr>
+<th>Termin</th>
+<th>Ort</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Donnerstag</strong> <br> 11:00 bis 14:00</td>
+<td><a href="https://metamine.windcloud.de/index.php/apps/calendar/p/LndQLpCpnGpnQrRX/dayGridMonth/now/view/sidebar/L3JlbW90ZS5waHAvZGF2L3B1YmxpYy1jYWxlbmRhcnMvTG5kUUxwQ3BuR3BuUXJSWC9CRDlEQkI3Qy1BRUZDLTQ5NjEtOTYyMi0yMjU0RTdGRDBBMjQuaWNz/1754557200" target="_blank" rel="noopener" title="Kalender des IGLU e.V."><strong>Nippes</strong> Sudermannplatz 1</a><br>
+<a class="nodecoration" href="mailto:bildung@iglu-gug.org" target="_blank" rel="noopener" title="Email Adresse IGLU">&#9993; Mail an ...</a></td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 style="margin-bottom: 0;" id="3ddruck">3D Druck Repair Café</h2>
+<table class="table_line_separator table_extra_padding"><thead>
+<tr>
+<th>Termin</th>
+<th >Infos + Anmeldung</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Einmal im Monat unregelmäßig </td>
+<td><a href="https://www.museen.koeln/besuchen/veranstaltungen?date=2026-05&ftype=150&search=repair" target="_blank" rel="noopener" title="Repair Veranstaltungen des MAKK"><strong>Innenstadt</strong> im Museum für Angewandte Kunst Köln</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h1 id="blog"><a href="blog/index.htm" title="Bilder und Infos">Reparatur Blog / Bilder von durchgeführten Reparaturen</a></h1>
+<h1 id="blog"><a href="nuetzliches/index.htm" title="Nützliche Schaltungen und Bilder für Elektroreparaturen">Nützliche Schaltungen und Bilder für Elektroreparaturen</a></h1>
+
+<br>
+<p>Allgemeine Fragen zu Repair Cafés und dieser Internetseite bitte an info äht repaircafe-koeln.de (wegen zunemendem Spam etwas verfremdet).<br>
+Reparaturanmeldungen bitte an das jeweilige Repair Café senden.</p>
+
+
+<h2 style="margin-bottom: 0;"">Übersichtskarte der Repair Cafés und Fahrad Selbsthilfe-Werkstätten in Köln und Umgebung</h2>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> <!-- Leaflet JS -->
+<script src="map.js"></script> <!-- Script lokale Daten und Anpassungen  -->
+
+
+<br>
+<h3 id="Initiativenliste"><a href="https://www.reparatur-initiativen.de/orte?keyword=k%C3%B6ln" target="_blank" rel="noopener" title="Reparatur-Initiativen Orte Suchformular Koeln">Beim Netzwerk Reparatur-Initiativen eingetragene Initiativen in Köln</a></h3>
+<h3 id="terminliste"><a href="https://www.reparatur-initiativen.de/termine?keyword=k%C3%B6ln" target="_blank" rel="noopener" title="Reparatur-Initiativen Termine Suchformular Köln">Aktuelle Termine einiger eingetragener Repair Cafés und Initiativen in Köln</a></h3>
+
+
+<h1 id="termine_woanders">Repair Cafés in der Kölner Nachbarschaft</h1>
+
+<table class="table_line_separator"><thead>
+<tr>
+<th>Termin</th>
+<th>Ort</th>
+<th>Besonderes</th>
+</tr>
+</thead><tbody>
+
+<tr id="Termin_Roesrath">
+<td><strong>1.&nbsp;Samstag</strong> im Monat <br> 14:00 bis 17:00</td>
+<td><a href="https://repaircaferoesrath.weebly.com/" target="_blank" rel="noopener" title="Homepage des Repair Cafe Rösrath"><strong>Rösrath</strong> im Gemeindesaal der evangelischen Versöhnungskirche</a><br>
+<a class="nodecoration" href="mailto:repaircafe-roesrath@web.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Näharbeiten, Waffeln</td>
+</tr>
+
+<tr id="Termin_Frechen">
+<td><strong>1.&nbsp;Samstag</strong> im Monat <br> 14:00 bis 18:00</td>
+<td><a href="https://www.mgh-frechen.de/angebote-hilfen/alle-generationen/reparatur-cafe" target="_blank" rel="noopener" title="Seite des Repair Cafe Frechen"><strong>Frechen</strong> im Mehrgenerationenhaus Oase</a><br>
+<a class="nodecoration" href="mailto:mgh-frechen@t-online.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Näharbeiten, gutes Catering</td>
+</tr>
+
+<tr id="Termin_Huerth">
+<td><strong>2.&nbsp;Samstag</strong> im Monat <br> 14:00 bis 17:00</td>
+<td><a href="https://repaircafehuerth.wixsite.com/start/wann" target="_blank" rel="noopener" title="Homepage des Repair Cafe Hürth"><strong>Hürth</strong> im Familienbüro Mittendrin</a><br>
+<a class="nodecoration" href="mailto:repaircafe.huerth@gmail.com?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td></td>
+</tr>
+
+<tr id="Termin_BergischGladbach">
+<td><strong>3.&nbsp;Samstag</strong> im Monat <br> 10:00 bis 13:00</td>
+<td><a href="https://www.reparatur-initiativen.de/reparatur-cafe-gl65647/" target="_blank" rel="noopener" title="Seite des Repair Cafe Bergisch-Gladbach"><strong>Bergisch-Gladbach</strong> in der Begegnungsstätte Mittendrin der Caritas</a><br>
+<a class="nodecoration" href="mailto:mittendrin@caritas-rheinberg.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Möglichst mit Voranmeldung</td>
+</tr>
+
+<tr id="Termin_Koenigsdorf">
+<td><strong>4.&nbsp;Donnerstag</strong> im Monat <br> 14:00 bis 17:30</td>
+<td><a href="https://www.mit-füreinander.de/mi-fue-termine.html" target="_blank" rel="noopener" title="Termne der ökumenischen Nachbarschaftshilfe Königsdorf"><strong>Frechen-Königsdorf</strong> im JugendMagnet hinter St Sebastianus</a><br>
+<a class="nodecoration" href="mailto:mit-fuer-einander@netcologne.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Auch Näharbeiten, Catering</td>
+</tr>
+
+<tr id="Termin_Leverkusen">
+<td><strong>letzten Samstag</strong> im Monat (ausser Dezember) <br> 11:00 bis 15:00</td>
+<td><a href="https://ausbesserungswert.de/" target="_blank" rel="noopener" title="Homepage des Ausbesserungswert Leverkusen e. V.">Probierwerk in <strong>Leverkusen-Opladen</strong></a><br>
+<a class="nodecoration" href="mailto:info@ausbesserungswert.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Alle ungerade Monate in Opladen, alle gerade an wechselnden Standorten in Leverkusen</td>
+</tr>
+
+<tr id="Termin_Alfter">
+<td><strong>letzten Samstag</strong> im Monat <br> 14:00 bis 17:00</td>
+<td><a href="https://www.repaircafe-alfter.de/" target="_blank" rel="noopener" title="Homepage des Repair Cafe Alfter"><strong>Alfter</strong> bei Bonn</a><br>
+<a class="nodecoration" href="mailto:alfter.repair@gmail.com?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td></td>
+</tr>
+
+<tr id="Termin_Bruehl">
+<td><strong>Einmal im Monat am Samstag</strong> <br> 14:00 bis 17:00</td>
+<td><a href="https://repaircafebruehl.wordpress.com/termine/" target="_blank" rel="noopener" title="Termine des Repair Cafe Brühl."><strong>Brühl</strong> im MargaretaS</a><br>
+<a class="nodecoration" href="mailto:repaircafe-bruehl@web.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Gutes Catering</td>
+</tr>
+
+<tr id="Termin_Pulheim">
+<td>Samstags <strong>alle 2 bis 3 Monate</strong> <br> 10:30 bis 14:00</td>
+<td><a href="https://www.agenda21-pulheim.de/anmeldung-zum-repair-cafe" target="_blank" rel="noopener" title="Homepage Repair Cafe der agenda21."><strong>Pulheim-Brauweiler</strong> im DRK Jugendtreff ZAHNRAD</a><br>
+<a class="nodecoration" href="mailto:rc@agenda21-pulheim.de?bcc=info%40repaircafe-koeln.de&subject=Reparaturanfrage f&uuml;r ein/eine ...&body=Liebe Reparateure,%0D%0Aich m&ouml;chte gerne ein/eine ... bei Euch reparieren.%0D%0AFolgender Fehler tritt auf: %0D%0A..." title="Email an das Repair Cafe">&#9993; Mail an ...</a></td>
+<td>Möglichst mit Voranmeldung</td>
+</tr>
+
+
+</tbody>
+</table>
+
+<h1 id="Bonn">Repair Cafés in Bonn</h1>
+<h3 id="bonn"><a href="https://www.repaircafesbonn.de/standorte/" target="_blank" rel="noopener" title="Übersichtskarte der Repair Cafe in Bonn">Schöne Übersichtskarte der <strong>Repair Cafés in Bonn</strong></a></h3>
+
+<h1 id="Sonstige">Und noch weiter weg</h1>
+<h3 id="Uebersicht_Initiativen"><a href="https://www.reparatur-initiativen.de/orte" target="_blank" rel="noopener" title="Reparatur-Initiativen Karte">Übersichtskarte für Deutschland und Österreich von <strong>reparatur-initiativen.de</strong></a></h3>
+<h3 id="Uebersicht_Org"><a href="https://www.repaircafe.org/de/besuchen/" target="_blank" rel="noopener" title="Homepage repaircafe.org">Übersichtskarte internationaler Repair Cafés von <strong>repaircafe.org</strong></a></h3>
+
+
+<br>
+<h1 id="media_links">Links zu Video und Audio Beiträgen</h1>
+<ul>
+<li><a href="media/Morgenmagazin-MOMA-Reporter_Muellvermeidung_im_Repair-Cafe.mp4?dl=0" target="_blank" title="Video 4:51 Min">Ein Beitrag des Morgenmagazins von 18.1.2022 über das Repair Café [161 MB]</a></li>
+<li><a href="media/2022-12-27_Tagesthemen_Ausschnitt.mp4?dl=0" target="_blank" title="Video 1:04 Min">Ausschnitt aus den Tagesthemen vom 27.12.2022 [49 MB]</a></li>
+<li><a href="https://www1.wdr.de/mediathek/audio/wdr5/wdr5-westblick-aktuell/audio-repaircafe-freude-am-gemeinsamen-reparieren-100.html" target="_blank" rel="noopener" title="Seite mit Audio 4:33 Min von Wiebke Dumpe">Beitrag des WDR 5 Westblicks vom 5.2.2024 [Audio 4:33 Min]</a></li>
+<li><a href="https://www.instagram.com/reel/C16pkV8NR0L/" target="_blank" rel="noopener" title="Seite mit Video 0:24 Min">Instagram Beitrag von kugelzwei des WDR vom 10.1.2024 [0:24 Min]</a></li>
+</ul>
+
+
+<br>
+
+<h1 id="bilder">Bilder der Räumlichkeiten</h1>
+
+<table>
+<tbody>
+<tr id="Dellbrueck">
+<td><a href="pictures/Dellbrueck.jpg"><img src="pictures/640/Dellbrueck.webp" alt="Räumlichkeiten im Repair Cafe Dellbrück" title="Räumlichkeiten im Repair Cafe Dellbrück"></a></td>
+<td><a href="pictures/Riehl.jpg"><img src="pictures/640/Riehl.jpg" alt="Räumlichkeiten im Repair Cafe Riehl" title="Räumlichkeiten im Repair Cafe Riehl"></a></td>
+</tr>
+<tr>
+<td>Dellbrück in der Bergisch Gladbacher Str. 1006, 51069 Köln</td>
+<td>Riehl in der Boltensternstraße 16, 50735 Köln</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr id="Raderthal">
+<td><a href="pictures/Raderthal.jpg"><img src="pictures/640/Raderthal.jpg" alt="Räumlichkeiten im Repair Cafe Raderthal" title="Räumlichkeiten im Repair Cafe Raderthal"></a></td>
+<td><a href="pictures/Chorweiler.jpg"><img src="pictures/640/Chorweiler.jpg" alt="Räumlichkeiten im Repair Cafe Chorweiler" title="Räumlichkeiten im Repair Cafe Chorweiler"></a></td>
+</tr>
+<tr>
+<td>Raderthal im Gemeindesaal der Philippus Kirche in der Albert-Schweitzer-Straße 3-5, 50968 Köln</td>
+<td>Chorweiler im Untergeschoss des Bürgerzentrums in der Pariser Passage 1, 50765 Köln</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr id="Engelshof">
+<td><a href="engelshof/pictures/Engelshof_1.jpg"><img src="engelshof/pictures/640/Engelshof_1.jpg" alt="Räumlichkeiten im Repair Cafe Engelshof" title="Räumlichkeiten im Repair Cafe Westhoven im Engelshof"></a></td>
+<td><a href="poll/pictures/Poll.jpg"><img src="poll/pictures/Poll.jpg" alt="Räumlichkeiten im Repair Cafe Poll" title="Räumlichkeiten im Repair Cafe Poll"></a></td>
+</tr>
+<tr>
+<td>Westhoven im Engelshof in der Oberstr. 96, 51149 Köln</td>
+<td>Poll im Quartier am Hafen am Poller Kirchweg 78-90, 51105 Köln</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr id="Widdersdorf">
+<td><a href="widdersdorf/pictures/Widdersdorf.jpg"><img src="widdersdorf/pictures/640/Widdersdorf.jpg" alt="Räumlichkeiten im Repair Cafe Widdersdorf" title="Räumlichkeiten im Repair Cafe Widdersdorf"></a></td>
+<td><a href="pictures/Mauenheim.jpg"><img src="pictures/640/Mauenheim.jpg" alt="Räumlichkeiten im Repair Cafe Mauenheim" title="Räumlichkeiten im Repair Cafe Mauenheim"></a></td>
+</tr>
+<tr>
+<td>Widdersdorf in der Hauptstraße 10, 50859 Köln</td>
+<td>Mauenheim im Pfarrsaal St. Quirinus in der Bergstr 87, 50739 Köln</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</tr id="Stollwerk">
+<td><a href="pictures/Stollwerk.jpg"><img src="pictures/640/Stollwerk.jpg" alt="Räumlichkeiten im Repair Cafe Stollwerk" title="Räumlichkeiten im Repair Cafe Stollwerk"></a></td>
+<td><a href="pictures/Lindweiler.jpg"><img src="pictures/640/Lindweiler.jpg" alt="Räumlichkeiten im Repair Cafe Lindweiler" title="Räumlichkeiten im Repair Cafe Lindweiler im Libützje"></a></td>
+<tr>
+<td>Stollwerk in der Dreikönigenstr. 23, 50678 Köln</td>
+<td>Lindweiler im Libüzje im Marienberger Weg 19, 50767 Köln</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</tr id="Schmuk">
+<td><a href="pictures/Schmuk.jpg"><img src="pictures/640/Schmuk.jpg" alt="Räumlichkeiten im Repair Cafe Schmitz und Kunst" title="Räumlichkeiten im Repair Cafe Schmitz und Kunst"></a></td>
+<td></td>
+<tr>
+<td>Schmitz und Kunst der Luxemburger Str. 284a, 50937 Köln</td>
+<td></td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr id="Ehrenfeld">
+<td><a href="pictures/Ehrenfeld.jpg"><img src="pictures/640/Ehrenfeld.jpg" alt="Räumlichkeiten im Repair Cafe Büze Ehrenfeld" title="Räumlichkeiten im Repair Cafe BüzE Ehrenfeld"></a></td>
+<td><a href="pictures/Worringen.jpg"><img src="pictures/640/Worringen.jpg" alt="Räumlichkeiten im Repair Cafe Worringen" title="Räumlichkeiten im Repair Cafe Worringen"></a></td>
+</tr>
+<tr>
+<td>BüzE Ehrenfeld in der Venloer Straße 429, 50825 Köln</td>
+<td>Worringen in der St.Tönnisstrasse 65, 50769 Köln</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr id="Stadtbibliothek">
+<td><a href="pictures/Zentralbibliothek.jpg"><img src="pictures/640/Zentralbibliothek.jpg" alt="Räumlichkeiten im Repair Cafe in der Stadtbibliothek" title="Räumlichkeiten im Repair Cafe in der Stadtbibliothek"></a></td>
+<td><a href="pictures/Stephanus.jpg"><img src="pictures/640/Stephanus.jpg" alt="Räumlichkeiten im Repair Cafe im Gemeindezentrum Stephanus" title="Räumlichkeiten im Repair Cafe im Gemeindezentrum Stephanus"></a></td>
+</tr>
+<tr>
+<td>Innenstadt in der Stadtbibliothek in der Hohe Straße 68-82, 50667 Köln</td>
+<td>Ehrenfeld im Gemeindezentrum Stephanus in der Subbelrather Str. 206-210, 50823 Köln</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+
+<tr id="Repairmobil">
+<td><a href="pictures/Repairmobil.jpg"><img src="pictures/640/Repairmobil.jpg" alt="Repairmobil des Innovationsbüros der Stadt Köln" title="Repairmobil des Innovationsbüros der Stadt Köln"></a></td>
+<td><a href="pictures/Liebig_Fahrrad.jpg"><img src="pictures/640/Liebig_Fahrrad.jpg" alt="Fahrrad Selbsthilfe Werkstatt in der Liebigstr. 257" title="Fahrrad Selbsthilfe Werkstatt in der Liebigstr. 257"></a></td>
+</tr>
+<tr>
+<td><a href="https://www.repaircafe-koeln.de/repairmobil/" target="_blank" rel="noopener" title="Repairmobil">Repairmobil</a> des Innovationsbüros der Stadt Köln</td>
+<td>Fahrrad Selbsthilfe Werkstatt in der Liebigstr. 257, 50739 Köln</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr id="Bikekitchen">
+<td><a href="pictures/Bikekitchen.jpg"><img src="pictures/640/Bikekitchen.jpg" alt="Bikekitchen im AZ" title="Bikekitchen im AZ"></a></td>
+<td><a href="pictures/Fahrradbuedchen.jpg"><img src="pictures/640/Fahrradbuedchen.jpg" alt="Bickendorfer Fahrradbuedchen" title="Bickendorfer Fahrradbuedchen"></a></td>
+</tr>
+<tr>
+<td>Bikekitchen im autonomen Zentrum in der Nähe des Unicenters</td>
+<td>Bickendorfer Fahrradbüdchen in der Wolffsohnstr. 12a, 50827 Köln</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr id="Nachwuchs">
+<td><a href="pictures/EhrenfeldNachwuchs.jpg"><img src="pictures/640/EhrenfeldNachwuchs.jpg" alt="Nachwuchsförderung im Repair Cafe Büze Ehrenfeld" title="Nachwuchsförderung im Repair Cafe Büze Ehrenfeld"></a></td>
+<td><a href="pictures/StollwerkNachwuchs.jpg"><img src="pictures/640/StollwerkNachwuchs.jpg" alt="Nachwuchsförderung im Repair Cafe Stollwerk" title="Nachwuchsförderung im Repair Cafe Stollwerk"></a></td>
+</tr>
+<tr>
+<td>Nachwuchsförderung</td>
+<td>Nachwuchsförderung</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+
+<tr id="Roesrath">
+<td><a href="pictures/Roesrath.jpg"><img src="pictures/640/Roesrath.jpg" alt="Räumlichkeiten im Repair Cafe Roesrath" title="Räumlichkeiten im Repair Cafe Roesrath"></a></td>
+<td><a href="pictures/Frechen.jpg"><img src="pictures/640/Frechen.jpg" alt="Räumlichkeiten im Repair Cafe Frechen" title="Räumlichkeiten im Repair Cafe Frechen"></a></td>
+</tr>
+<tr>
+<td>Rösrath in der Hauptstr. 16, 51503 Rösrath</td>
+<td>Frechen in der Dr. Tusch-Straße 1–3, 50226 Frechen</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr id="Huerth">
+<td><a href="pictures/Huerth.jpg"><img src="pictures/640/Huerth.jpg" alt="Räumlichkeiten im Repair Cafe Hürth" title="Räumlichkeiten im Repair Cafe Hürth"></a></td>
+<td><a href="pictures/Bruehl.jpg"><img src="pictures/640/Bruehl.jpg" alt="Räumlichkeiten im Repair Cafe Brühl" title="Räumlichkeiten im Repair Cafe Brühl"></a></td>
+</tr>
+<tr>
+<td>Hürth in der Bonnstraße 32, 50354 Hürth</td>
+<td>Brühl am Heinrich-Fetten-Platz, 50321 Brühl</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr id="Koenigsdorf">
+<td><a href="pictures/Koenigsdorf.jpg"><img src="pictures/640/Koenigsdorf.jpg" alt="Räumlichkeiten im Repair Cafe Koenigsdorf" title="Räumlichkeiten im Repair Cafe Koenigsdorf"></a></td>
+<td><a href="pictures/Brauweiler.jpg"><img src="pictures/640/Brauweiler.jpg" alt="Räumlichkeiten im Repair Cafe Pulheim" title="Räumlichkeiten im Repair Cafe Pulheim-Brauweiler"></a></td>
+</tr>
+<tr>
+<td>Frechen-Königsdorf in der Aachenerstraße 564, 50226 Frechen</td>
+<td>Pulheim-Brauweiler in der Donatusstraße 43, 50259 Pulheim</td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr id="Leverkusen">
+<td><a href="pictures/Leverkusen.jpg"><img src="pictures/640/Leverkusen.jpg" alt="Räumlichkeiten im Repair Cafe Leverkusen" title="Räumlichkeiten im Repair Cafe Leverkusen-Opladen"></a></td>
+<td><a href="pictures/Alfter.jpg"><img src="pictures/640/Alfter.jpg" alt="Räumlichkeiten im Repair Cafe Alfter" title="Räumlichkeiten im Repair Cafe Alfter"></a></td>
+</tr>
+<tr>
+<td>Leverkusen-Opladen in der Stauffenbergstr. 14-20, 51379 Leverkusen</td>
+<td>Alfter bei Bonn in der Knipsgasse 43, 53347 Alfter</td>
+</tr>
+
+</tbody>
+</table>
+
+<h1 id="kategorien">Reparaturkategorien</h1>
+<figure><img src="files/kategorien.png" alt="Kreisdiagramm der prozentualen Verteilung der Reparaturkategorien des Repair Cafes im Büze" title="Kreisdiagramm der prozentualen Verteilung der Reparaturkategorien des Repair Cafes im Büze">
+  <figcaption>
+    Verteilung der Reparaturkategorien des Repair Cafés im Büze
+  </figcaption>
+</figure>
+
+
+<h1 id="statistiken">Reparaturstatistiken des Repair Cafés im Büze</h1>
+<figure style="display: inline-block;"><img src="files/erfolg.png" alt="Kreisdiagramm der Verteilung des Reparaturerfolgs" title="Kreisdiagramm der Verteilung des Reparaturerfolgs">
+  <figcaption>
+    Verteilung des <strong>Reparaturerfolgs</strong> &nbsp; &nbsp;
+  </figcaption>
+</figure>
+<figure style="display: inline-block;"><img src="files/dauer.png" alt="Kreisdiagramm der Verteilung der Reparaturdauer" title="Kreisdiagramm der Verteilung der Reparaturdauer">
+  <figcaption>
+    Verteilung der <strong>Reparaturdauer</strong>
+  </figcaption>
+</figure>
+<figure style="display: inline-block;"><img src="files/erfolg_kategorie.png" alt="Kreisdiagramm des Erfolgs nach Kategorie" title="Kreisdiagramm des Erfolgs nach Kategorie">
+  <figcaption>
+    Verteilung des <strong>Erfolgs nach Kategorie</strong>
+  </figcaption>
+</figure>
+
+
+<h2 id="nuetzliches"><a href="nuetzliches/index.htm" rel="noopener" target="_blank" title="Nützliches für Elektroreparaturen">Nützliche Schaltpläne und Bilder für Elektroreparaturen</a></h2>
+
+<h1 id="materialien">Materialien für ein Repaircafé</h1>
+
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQAtYQlcLgT0tYxDT9bGHw3M1l5bGW8YhxkqTdSieMQ2yL8wMSuEtDnEExw-w-lPK01v8oe76P5WUbS/pubhtml" rel="noopener" target="_blank" title="Excel Werkzeug und Messgeräte Liste">Google Sheets Werkzeug und Messgeräte Liste</a></li>
+<li>Beispiel für den Laufzettel eines Repair Cafés inclusive Hausordnung und Haftungsbeschränkung auf der Rückseite <a href="extras/Laufzettel_Bueze.pdf" rel="noopener" target="_blank" title="PDF Laufzettel für das Repair Cafe im Bueze">[PDF]</a> <a href="extras/Laufzettel_Bueze.docx" rel="noopener" title="Word Laufzettel für das Repair Cafe im Bueze">[Word]</a></li>
+<li><a href="https://www.reparatur-initiativen.de/files/kcfinder/pages/1723/files/Haftungsbegrenzung%20Stand%202018_05_24.pdf" rel="noopener" target="_blank" title="Haftungsbegrenzungsvorlage der Reparatur-Initiativen">Haftungsbegrenzungsvorlage der Reparatur-Initiativen [PDF]</a></li>
+<li><a href="https://www.repaircafe.org/de/hausordnung/" rel="noopener" target="_blank" title="Hausordnung">Hausordnung von repaircafe.org</a></li>
+<li><a href="extras/pfeile_repair_cafe.pdf" rel="noopener" target="_blank" title="Plakate des Repaircafes">PDF mit Plakaten (mit Pfeilen) des Repaircafes</a></li>
+</ul>
+
+
+<h2 id="useful_links">Weitere Links</h2>
+<ul>
+<li><a href="https://www.reparatur-initiativen.de/seite/links" target="_blank" title="Linksammlung der Reparatur-Initiativen">Umfangreiche Linksammlung der Reparatur-Initiativen.</a></li>
+<li><a href="extras/RepairCafe_trifft_Kita-Leitfaden.pdf" target="_blank" title="">Eine Handreichung für Reparaturcafé-Besuche in der Kindertagesstätte</a>
+    von Jürgen Klute vom <a href="https://repaircafe-vg-nieder-olm.de/index.php/portfolio-items/kita/" target="_blank" title=""> Repair Café VG Nieder-Olm.</a></li>
+<li><a href="https://www.engagiert-in-nrw.de/sicherheit" target="_blank" title="Versicherung im Ehrenamt NRW">Infos zur Haftplicht- und Unfall-Versicherung für Ehrenamtler in NRW.</a></li>
+<li><a href="extras/faltblatt_sicherheit_im_ehrenamt_stand_241017_0.pdf" target="_blank" rel="noopener" title="Faltblatt Sicherheit im Eerenamt NRW">Faltblatt Sicherheit im Ehrenamt NRW</a></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<div style="font-size: 0.5em;">
+Lokale Links: <a href="#map" title="Map der Locations">Map</a> &nbsp; <a href="#termine_monatlich" title="">termine_monatlich</a> &nbsp;
+<a href="#termine_sonst" title="">termine_sonst</a> &nbsp; <a href="#was" title="Was repariert wird">Was repariert wird</a> &nbsp;
+<a href="#termine_fahrrad" title="">termine_fahrrad</a> &nbsp; <a href="#termine_woanders" title="">termine_woanders</a> &nbsp;
+<a href="#materialien" title="">materialien</a> &nbsp; <a href="#bilder" title="">bilder</a> &nbsp; <a href="#kategorien" title="">kategorien</a> &nbsp;
+<a href="#statistiken" title="">statistiken</a> &nbsp; <a href="#useful_links" title="">useful_links</a>
+</div>
+
+
+</div><!-- page-conten -->
+</div><!-- page-frame -->
+
+<footer>
+<a href="impressum.htm">Impressum</a>
+</footer><!-- .site-footer -->
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+Bilder in Picasa mit 800 Pixel exportieren.
+In Word als "Webseite, gefiltert" speichern, Abfrage mit ja beantworten.
+Danach die Ansicht wieder auf "Drucklayout" ändern.
+Dann die Neuen Dateien und den neuen Text in den vorhandenen blog einfügen.
+
+" class=MsoNormal" löschen
+ id="Grafik 6" etc löschen
+
+
+Wenn <p class=MsoNormal>&nbsp;</p> vorkommt, im original die Leerzeilen (vor dem Seitenumbruch) entfernen
+
+Im .htm File alles über <h1> ersetzen und am Ende ein 2. </div> einfügen
+alle id="Grafik 2" löschen.
+Am Ende Format > HTML-Prüfung > tidy im UEdit laufen lassen.
+
+Smiley &#128522; oder <span style='font-family:Wingdings'>J</span> oder
