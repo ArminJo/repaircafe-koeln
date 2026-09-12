@@ -1,31 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.repaircafe-koeln.de</loc>
+        <loc>https://www.repaircafe-koeln.de/bilder.htm</loc>
     </url>
     <url>
-        <loc>https://www.repaircafe-koeln.de/bueze</loc>
+        <loc>https://www.repaircafe-koeln.de/blog.htm</loc>
     </url>
     <url>
-        <loc>https://www.repaircafe-koeln.de/poll</loc>
+        <loc>https://www.repaircafe-koeln.de/impressum.htm</loc>
     </url>
     <url>
-        <loc>https://www.repaircafe-koeln.de/repairmobil</loc>
+        <loc>https://www.repaircafe-koeln.de/index.htm</loc>
     </url>
     <url>
-        <loc>https://www.repaircafe-koeln.de/widdersdorf</loc>
+        <loc>https://www.repaircafe-koeln.de/links.htm</loc>
     </url>
     <url>
-        <loc>https://www.repaircafe-koeln.de/engelshof</loc>
+        <loc>https://www.repaircafe-koeln.de/nuetzliches.htm</loc>
     </url>
     <url>
-        <loc>https://www.repaircafe-koeln.de/extras</loc>
+        <loc>https://www.repaircafe-koeln.de/statistik.htm</loc>
     </url>
     <url>
-        <loc>https://www.repaircafe-koeln.de/files</loc>
+        <loc>https://www.repaircafe-koeln.de/termine.htm</loc>
     </url>
     <url>
-        <loc>https://www.repaircafe-koeln.de/media</loc>
+        <loc>https://www.repaircafe-koeln.de/umland.htm</loc>
+    </url>
+    <url>
+        <loc>https://www.repaircafe-koeln.de/extras//nuetzliches.htm</loc>
+    </url>
+    <url>
+        <loc>https://www.repaircafe-koeln.de/bueze/index.htm</loc>
+    </url>
+    <url>
+        <loc>https://www.repaircafe-koeln.de/poll/index.htm</loc>
+    </url>
+    <url>
+        <loc>https://www.repaircafe-koeln.de/repairmobil/index.htm</loc>
+    </url>
+    <url>
+        <loc>https://www.repaircafe-koeln.de/widdersdorf/index.htm</loc>
+    </url>
+    <url>
+        <loc>https://www.repaircafe-koeln.de/engelshof/index.htm</loc>
+    </url>
+    <url>
+        <loc>https://www.repaircafe-koeln.de/media/Morgenmagazin-MOMA-Reporter_Muellvermeidung_im_Repair-Cafe.mp4</loc>
     </url>
     <url>
         <loc>https://www.repaircafe-koeln.de/blog/repaircafe_blog_2021.htm</loc>
@@ -43,9 +64,24 @@
         <loc>https://www.repaircafe-koeln.de/blog/repaircafe_blog_2025.htm</loc>
     </url>
     <url>
+        <loc>https://www.repaircafe-koeln.de/extras/Spende_Bueze.pdf</loc>
+    </url>
+    <url>
+        <loc>https://www.repaircafe-koeln.de/extras/Was_ist_ein_Repaircafe.pdf</loc>
+    </url>
+    <url>
         <loc>https://www.repaircafe-koeln.de/extras/Laufzettel_Bueze.pdf</loc>
     </url>
     <url>
+        <loc>https://www.repaircafe-koeln.de/extras/Laufzettel_Zentralbibliothek_mit_Nummer.docx</loc>
+    </url>
+    <url>
+        <loc>https://www.repaircafe-koeln.de/extras/Anleitung_Seriendruck_mit_laufender_Nummer.htm</loc>
+    </url>
+    <url>
         <loc>https://www.repaircafe-koeln.de/extras/Pfeile_Repair_Cafe.pdf</loc>
+    </url>
+    <url>
+        <loc>https://www.repaircafe-koeln.de/extras/RepairCafeStatistik.xls</loc>
     </url>
 </urlset>

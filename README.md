@@ -5,9 +5,9 @@ Content of [https://www.repaircafe-koeln.de/index.htm](https://www.repaircafe-ko
 
 [![Badge License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
  &nbsp; &nbsp;
-[![Badge Version](https://img.shields.io/github/v/release/ArminJo/LCDBigNumbers?color=yellow&logo=DocuSign&logoColor=white)](https://github.com/ArminJo/LCDBigNumbers/releases/latest)
+[![Badge Version](https://img.shields.io/github/v/release/ArminJo/repaircafe-koeln?color=yellow&logo=DocuSign&logoColor=white)](https://github.com/ArminJo/repaircafe-koeln/releases/latest)
  &nbsp; &nbsp;
-[![Badge Commits since latest](https://img.shields.io/github/commits-since/ArminJo/LCDBigNumbers/latest?color=yellow)](https://github.com/ArminJo/LCDBigNumbers/commits/master)
+[![Badge Commits since latest](https://img.shields.io/github/commits-since/ArminJo/repaircafe-koeln/latest?color=yellow)](https://github.com/ArminJo/repaircafe-koeln/commits/master)
  &nbsp; &nbsp;
 <br/>
 <br/>
@@ -16,5 +16,9 @@ Content of [https://www.repaircafe-koeln.de/index.htm](https://www.repaircafe-ko
 </div>
 
 # Revision History
+### Version 1.0.1
+ - Neue Laufzettel.
+ - Link auf Routenplaner.
+
 ### Version 1.0.0
- Initial Git version.
+ - Initial Git version.
