@@ -16,7 +16,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 		background-color: #e9f2f9; /* Sidebar Background Color */
 		margin: 0;
 	}
-	figure{
+	figure {
 		margin: 0;
 	}
 	img {
@@ -44,17 +44,17 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 }
 
 @media only screen {
-	h1{
+	h1 {
 		font-size: 2.6rem;
 		padding-top: 4%;
 		margin-bottom: 4%;
 		margin: 0;
 	}
-	h2{
+	h2 {
 		font-size: 2rem;
 		margin-top: 4%;
 	}
-	li{
+	li {
 		font-size: 1.3em; /* 130 % */
 	}
 }

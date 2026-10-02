@@ -16,7 +16,7 @@
 <h1 id="koeln">Repair Cafés in Köln</h1>
 
 <nav class="tabs">
-    <a href="index.htm">Allgemein</a>
+    <a href="/">Allgemein</a>
     <a href="termine.htm">Termine</a>
     <a href="umland.htm">Umland</a>
     <a href="karte.htm">Karte</a>
@@ -105,6 +105,9 @@
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
+<tr>
+<td colspan="2"><h3>SMD Gehäusebezeichnungen</h3></td>
+</tr>
 </tr>
 <tr id="SMD">
 <td colspan="2"><a href="nuetzliches/pictures/smd-packages.png"><img src="nuetzliches/pictures/smd-packages.png" alt="SMD Gehäusebezeichnungen" title="SMD Gehäusebezeichnungen"></a></td>
@@ -117,9 +120,7 @@
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<td colspan="2">SMD Gehäusebezeichnungen</td>
-</tr>
+
 <tr id="SMDSizes">
 <td><a href="nuetzliches/pictures/smd-sizes-resistors.png"><img src="nuetzliches/pictures/640/smd-sizes-resistors.jpg" alt="SMD Widerstandsgrößen" title="SMD Widerstandsgrößen"></a></td>
 <td><a href="nuetzliches/pictures/smd-sizes-leds.jpg"><img src="nuetzliches/pictures/640/smd-sizes-leds.jpg" alt="SMD LED Größen" title="SMD LED Größen"></a></td>
@@ -133,29 +134,125 @@
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr id="VDR">
-<td colspan="2"><a href="nuetzliches/pictures/VDRs.jpg"><img src="nuetzliches/pictures/640/VDRs.jpg" alt="VDR" title="VDR"></a></td>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td colspan="2"><b>VDR / Varistor Codes</b><br>
-<b>20D 471K</b> - <b>20D</b> = 20 mm Disk, <b>471</b> ist die Spannung 47 * 10 hoch 1 = 470 Volt. <b>K</b> ist die Toleranz: J=5%, K=10%,L=15%, M=20%.<br>
+<td id="VDR" colspan="2"><h3>VDR / Varistor Codes</h3></td>
+</tr>
+<tr>
+<td colspan="2"><b>20D 471K</b> - <b>20D</b> = 20 mm Disk, <b>471</b> ist die Spannung 47 * 10 hoch 1 = 470 Volt. <b>K</b> ist die Toleranz: J=5%, K=10%,L=15%, M=20%.<br>
 <b>07K420</b> - <b>07</b> = 7 mm Disk, <b>K</b> 10%, <b>420</b> ist die Spannung 420 Volt.<br>
 <b>TVR10241</b> - <b>07</b> = 10 mm Disk, <b>K</b>=  10%, <b>241</b> ist die Spannung 24 * 10 hoch 1 = 240 Volt. Also nicht für 230 Volt Wechselspannung geeignet!</br>
 <b>Q14K275</b> - <b>Q14</b> = 14 mm Kantenlänge Rechteck, <b>K</b> = 10%, <b>275</b> ist die maximale dauerhafte  Betriebsspannung (RMS) in Wechselstromnetzen (275 V AC).<br>
 Varistoren werden mit der Zeit durch absorbierte Spannungsspitzen "müde" und können schließlich einen Kurzschluss verursachen oder optisch verschmoren und werden daher immer mit Vorsicherungen betrieben.</td>
 </tr>
-
 <tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td colspan="2"><a href="nuetzliches/pictures/VDRs.jpg"><img src="nuetzliches/pictures/640/VDRs.jpg" alt="VDR" title="VDR"></a></td>
 </tr>
 
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr id="KalteLoetstellen">
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td id="MieleMotorTriac" colspan="2"><h3>Triac + Thermosicherung in Miele Staubsaugermotoren</h3></td>
+</tr>
+</tr>
+<tr>
+<td colspan="2">Um an das Modul zu gelangen muss die Metallkappe des Motors mit dem Hammer abgeschlagen werden, die Mutter -die <b>Linksgewinde</b> hat-
+gelöst werden und der Deckel, der mit 4 Torx Schauben befestigt ist, vom Lager abgezogen werden.
+Der Deckel und die Scheibe gehen manchmal nur ab, wenn man den Deckel festhält und die Achse vorsichtig nach unter herausschlägt.
+Dann kann man das Triac Modul nach innen raus ziehen.<br>
+<a href="https://youtu.be/3h7Dvx3ZkXI?t=170" target="_blank" rel="noopener"> Youtube Video</a> dazu. <b>Der Rotor des Motors muss nicht rausgenommen werden!</b></td>
+</tr>
+<tr id="Miele_Triac">
+<td><a href="nuetzliches/pictures/MieleMotorTriac.png"><img src="nuetzliches/pictures/MieleMotorTriac.jpg" alt="Motor Triac Modul von Miele Staubsaugern" title="Motor Triac Modul von Miele Staubsaugern"></a></td>
+<td><a href="nuetzliches/pictures/MieleMotorTriac1.png"><img src="nuetzliches/pictures/MieleMotorTriac1.jpg" alt="Motor Triac Modul von Miele Staubsaugern" title="Motor Triac Modul von Miele Staubsaugern"></a></td>
+</tr>
+<tr>
+<td>Steckerbelegung der Motor Triac Platine von Miele Staubsaugern.
+Zwischen Motoranschluss 1 und 2 kann man den Widerstand des Motors messen < 10 Ohm.
+Wenn man dort 230 Volt anlegt -dabei bitte den Motor aussen festhalten- muss er drehen.</td>
+<td>Die Platine im Gehäuse.</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="nuetzliches/pictures/MieleMotorTriac_abgebrannt.jpg"><img src="nuetzliches/pictures/MieleMotorTriac_abgebrannt.jpg" alt="Abgebrannter Motor Triac Modul von Miele Staubsaugern" title="Abgebrannter Motor Triac Modul von Miele Staubsaugern"></a></td>
+<td><a href="nuetzliches/pictures/MieleMotorTriacEingebaut.jpg"><img src="nuetzliches/pictures/MieleMotorTriacEingebaut.jpg" alt="Eingebautes Motor Triac Modul von Miele Staubsaugern" title="Eingebautes Motor Triac Modul von Miele Staubsaugern"></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Hier war nur die Lötstelle abgebrannt, der Rest war noch in Ordnung.</td>
+<td>Die Anschlüsse im eingebauten Zustand</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="nuetzliches/pictures/MieleMotorThermoschutzAbgebrochen_top.jpg"><img src="nuetzliches/pictures/640/MieleMotorThermoschutzAbgebrochen_top.jpg" alt="Abgebrochener Thermoschutz" title="Abgebrochener Thermoschutz"></a></td>
+<td><a href="nuetzliches/pictures/MieleMotorThermoschutzAbgebrochen_side.jpg"><img src="nuetzliches/pictures/640/MieleMotorThermoschutzAbgebrochen_side.jpg" alt="Abgebrochener Thermoschutz" title="Abgebrochener Thermoschutz"></a></td>
+</tr>
+<tr>
+<td colspan="2">Hier war nur der Anschluss des Thermoschutzes abgebrochen.</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td id="KalteLoetstellen" colspan="2"><h3>Kalte Lötstellen</h3></td>
+</tr>
+<tr>
 <td><a href="nuetzliches/pictures/KalteLoetstellen.jpg"><img src="nuetzliches/pictures/KalteLoetstellen.jpg" alt="2 kalte Loetstellen" title="2 kalte Loetstellen"></a></td>
+<td></td>
+</tr>
+<tr>
+<td>2 sogenannten "kalten Lötstellen" eines Relais</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="nuetzliches/pictures/KalteLoetstellen_2.jpg"><img src="nuetzliches/pictures/640/KalteLoetstellen_2.jpg" alt="2 kalte Loetstellen" title="4 kalte Loetstellen"></a></td>
+<td><a href="nuetzliches/pictures/KalteLötstelle.jpg"><img src="nuetzliches/pictures/640/KalteLötstelle.jpg" alt="Abgelaufene Motorkohle" title="Abgelaufene Motorkohle"></a></td>
+</tr>
+<tr>
+<td>4 kalte Lötstellen</td>
+<td></td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td id="defekte" colspan="2"><h3>Bilder von Defekten</h3></td>
+</tr>
+<tr">
+<td></td>
 <td><a href="nuetzliches/pictures/AbgelaufeneMotorkohle.jpg"><img src="nuetzliches/pictures/640/AbgelaufeneMotorkohle.jpg" alt="Abgelaufene Motorkohle" title="Abgelaufene Motorkohle"></a></td>
 </tr>
 <tr>
@@ -170,44 +267,12 @@ Varistoren werden mit der Zeit durch absorbierte Spannungsspitzen "müde" und k�
 </tr>
 <tr id="AbgebrannteKontakte">
 <td><a href="nuetzliches/pictures/AbgebrannteKontakteEinesWasserkochers.jpg"><img src="nuetzliches/pictures/AbgebrannteKontakteEinesWasserkochers.jpg" alt="Abgebrannte Kontakte eines Wasserkochers" title="Abgebrannte Kontakte eines Wasserkochers"></a></td>
-<td></td>
+<td><a href="nuetzliches/pictures/ZerstoerterAnker.jpg"><img src="nuetzliches/pictures/640/ZerstoerterAnker.jpg" alt="Zerstörter Anker einer Küchenmaschine" title="Zerstörter Anker einer Küchenmaschine"></a></td>
 </tr>
 <tr>
-<td>Abgebrannte Kontakte eines Wasserkochers, der Obere ist fast ganz weg!</td>
-<td></td>
+<td>Abgebrannte Kontakte eines Wasserkochers,<br>der Obere ist fast ganz weg!</td>
+<td>Der zerstörte Anker einer Küchenmaschine</td>
 </tr>
-
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr id="Miele_Triac">
-<td><a href="nuetzliches/pictures/MieleMotorTriac.png"><img src="nuetzliches/pictures/640/MieleMotorTriac.jpg" alt="Motor Triac Modul von Miele Staubsaugern" title="Motor Triac Modul von Miele Staubsaugern"></a></td>
-<td><a href="nuetzliches/pictures/MieleMotorTriac1.png"><img src="nuetzliches/pictures/640/MieleMotorTriac1.jpg" alt="Motor Triac Modul von Miele Staubsaugern" title="Motor Triac Modul von Miele Staubsaugern"></a></td>
-</tr>
-<tr>
-<td>Steckerbelegung der Motor Triac Platine von Miele Staubsaugern.
-Zwischen Motoranschluss 1 und 2 kann man den Widerstand des Motors messen < 10 Ohm.
-Wenn man dort 230 Volt anlegt -dabei bitte den Motor aussen festhalten- muss er drehen.</td>
-<td>Die Platine im Gehäuse. Um an das Modul zu gelangen muss die Metallkappe des Motors mit dem Hammer abgeschlagen werden, die Mutter -die <b>Linksgewinde</b> hat-
-gelöst werden und der Deckel, der mit 4 Torx Schauben befestigt ist, vom Lager abgezogen werden.
-Dann kann man das Modul nach innen raus ziehen.<br>
-<a href="https://youtu.be/3h7Dvx3ZkXI?t=170" target="_blank" rel="noopener"> Youtube Video</a> dazu. <b>Der Motor muss nicht rausgenommen werden!</b></td>
-</tr>
-
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><a href="nuetzliches/pictures/MieleMotorTriac_abgebrannt.jpg"><img src="nuetzliches/pictures/MieleMotorTriac_abgebrannt.jpg" alt="Abgebrannter Motor Triac Modul von Miele Staubsaugern" title="Abgebrannter Motor Triac Modul von Miele Staubsaugern"></a></td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Hier war nur die Lötstelle abgebrannt, der Rest war noch in Ordnung.</td>
-<td>&nbsp;</td>
-</tr>
-
 
 </tbody>
 </table>
